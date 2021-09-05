@@ -8,11 +8,10 @@ class User:
     self.password=password
 
   def  save_user(self):
-        
-         """
+        """
         saves user in the user list
         """
-User.user_list.append(Self) 
+        User.user_list.append(self)
         
 def delete_user(self):
         """
@@ -39,5 +38,5 @@ def check_user_exists(cls,username,password):
                 return True
         return False     
 
-User.user_list.append(Self)  
+        # User.user_list.append(self)
       

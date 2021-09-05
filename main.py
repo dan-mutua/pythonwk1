@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.8
 from user import User
 from info import Credentials
+from  string import  random
 
 
 
@@ -157,11 +158,14 @@ def find_credential(account_name):
     return Credentials.find_by_account_platform(account_name)
 
 
-def generate_password(password_length):  
-    """
-    generate a random password for the user
-    """
-    return Credentials.generate_password(password_length)
+def generate_password(num):
+  password=''
+  for n in range(num):
+     x= random.randint(0,7)
+     password += string.printable(x)
+     return password
+
+print generate_password()     
      
 
 if __name__ == '__main__':

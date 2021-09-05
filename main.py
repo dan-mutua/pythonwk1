@@ -4,16 +4,82 @@ from info import info
 import  string
 import random
 
+def create_new_user(created_user_name, created_password):
+    '''
+    create a new user
+    '''
+    new_user = User(created_user_name, created_password)
+    return new_user
+def save_user(user):  
+      '''
+      save user
+      '''
+      user.save_user()
+
+def delete_user( created_user_name):  
+    '''
+    delete user
+    '''
+    User.delete_user( created_user_name)
+
+def check_existing_user(my_username):  
+    '''
+    check if user exists
+    '''
+    return User.user_exist(my_username)
+
+
+def check_user_password(username, password): 
+    '''
+    funtion to check whether the user enter the correct username and password
+    '''
+    return User.check_user(username, password)
+
+# Credential
+def create_new_credential(name, created_user_name, created_password):
+              '''
+              function to create a new credential
+              '''
+              new_credential = info(name, created_user_name, created_password)
+              return new_credential
+
+def save_credentials(credentials): 
+              '''
+              function to save credentials
+              '''
+              credentials.save_credentials()
+
+
+def display_credentials():  
+              """
+              funtion to display credentials
+              """
+              return info.display_credentials()
+
+
+def delete_credential(account_platform):  
+              '''
+              function to delete credentials
+              '''
+              return info.delete_credentials(account_platform)
+
+
+def find_credential(account_name):  
+              '''
+              find credentials eg to delete
+              '''
+              return info.find_by_account_platform(account_name)
+
 
 
 
 def main():
 
   
-  while True:
+  # while True:
     name = input("Enter your name ")
     print(name + " welcome to plocker")
-    print ("kinndly select 'll': to log in , 'tt' to create an account or 'uu' to exit")
+    print ("kindly select 'll': to log in , 'tt' to create an account or 'uu' to exit")
     nav_code = input().lower()
 
 
@@ -41,7 +107,29 @@ def main():
 
 
       else:
-        def create_new_user(name,  created_user_name, created_password):  
+        save_user(create_new_user(created_user_name, created_password))
+        while True:
+          
+          print("thank you succecfullly created a new account")  
+          print('\n')
+          # print ("log in to your account")
+          # my_username =input()
+          # print("password")
+          # my_password=input()
+
+
+
+        if  my_username != created_user_name or created_password != my_password:
+          # print("Invalid log in credentials")  
+          print ("log in to your account")
+          my_username =input()
+          print("password")
+          my_password=input()
+
+          print("welcome {my_username}")
+
+          # inserted code
+          def create_new_user(name,  created_user_name, created_password):  
             '''
             create a new user
             '''
@@ -49,64 +137,32 @@ def main():
             return new_user
 
 
-        def save_user(user):  
+          def save_user(user):  
               '''
               save user
               '''
               user.save_user()
-        # def create_user()
-        print("thank you succecfullly created a new account")  
-        print('\n')
-        print ("log in to your account")
-        my_username =input()
-        print("password")
-        my_password=input()
 
 
-        if  my_username == created_user_name or created_password == my_password:
-          # print("Invalid log in credentials")  
-          # print ("log in to your account")
-          # my_username =input()
-          # print("password")
-          # my_password=input()
-
-          print("welcome {my_username}")
-
-          # inserted code
-          # def create_new_user(name,  created_user_name, created_password):  
-          #   '''
-          #   create a new user
-          #   '''
-          #   new_user = User(name,  created_user_name, created_password)
-          #   return new_user
+          def delete_user( created_user_name):  
+              '''
+              delete user
+              '''
+              User.delete_user( created_user_name)
 
 
-          # def save_user(user):  
-          #     '''
-          #     save user
-          #     '''
-          #     user.save_user()
+          def check_existing_user(my_username):  
+              '''
+              check if user exists
+              '''
+              return User.user_exist(my_username)
 
 
-          # def delete_user( created_user_name):  
-          #     '''
-          #     delete user
-          #     '''
-          #     User.delete_user( created_user_name)
-
-
-          # def check_existing_user(my_username):  
-          #     '''
-          #     check if user exists
-          #     '''
-          #     return User.user_exist(my_username)
-
-
-          # def check_user_password(username, password): 
-          #     '''
-          #     funtion to check whether the user enter the correct username and password
-          #     '''
-          #     return User.check_user(username, password)
+          def check_user_password(username, password): 
+              '''
+              funtion to check whether the user enter the correct username and password
+              '''
+              return User.check_user(username, password)
 
 
 
@@ -190,8 +246,8 @@ def main():
       else:
         print(" you successfuly logged in , you can add your password here")  
 
-    elif nav_code == 'uu':
-      break
+    # elif nav_code == 'uu':
+    #   break
     else:
       print("enter valid code to navigate")  
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3.8
 from user import User
-from info import Credentials
-from  string import  random
+from info import info
+import  string
+import random
 
 
 
@@ -125,7 +126,7 @@ def create_new_credential(name, created_user_name, created_password):
     '''
     function to create a new credential
     '''
-    new_credential = Credentials(
+    new_credential = info(
         name, created_user_name, created_password)
     return new_credential
 
@@ -141,21 +142,21 @@ def display_credentials():
     """
     funtion to display credentials
     """
-    return Credentials.display_credentials()
+    return info.display_credentials()
 
 
 def delete_credential(account_platform):  
     '''
     function to delete credentials
     '''
-    return Credentials.delete_credentials(account_platform)
+    return info.delete_credentials(account_platform)
 
 
 def find_credential(account_name):  
     '''
     find credentials eg to delete
     '''
-    return Credentials.find_by_account_platform(account_name)
+    return info.find_by_account_platform(account_name)
 
 
 def generate_password(num):
@@ -165,7 +166,7 @@ def generate_password(num):
      password += string.printable(x)
      return password
 
-print generate_password()     
+print: generate_password()     
      
 
 if __name__ == '__main__':

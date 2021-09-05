@@ -1,4 +1,8 @@
+#!/usr/bin/env python3.8
 from user import User
+from info import Credentials
+
+
 
 
 def main():
@@ -77,6 +81,88 @@ def main():
       break
     else:
       print("enter valid code to navigate")  
+
+ 
+def create_new_user(name,  created_user_name, created_password):  
+    '''
+    create a new user
+    '''
+    new_user = User(name,  created_user_name, created_password)
+    return new_user
+
+
+def save_user(user):  
+    '''
+    save user
+    '''
+    user.save_user()
+
+
+def delete_user( created_user_name):  
+    '''
+    delete user
+    '''
+    User.delete_user( created_user_name)
+
+
+def check_existing_user(my_username):  
+    '''
+    check if user exists
+    '''
+    return User.user_exist(my_username)
+
+
+def check_user_password(username, password): 
+    '''
+    funtion to check whether the user enter the correct username and password
+    '''
+    return User.check_user(username, password)
+
+
+
+def create_new_credential(name, created_user_name, created_password):
+    '''
+    function to create a new credential
+    '''
+    new_credential = Credentials(
+        name, created_user_name, created_password)
+    return new_credential
+
+
+def save_credentials(credentials): 
+    '''
+    function to save credentials
+    '''
+    credentials.save_credentials()
+
+
+def display_credentials():  
+    """
+    funtion to display credentials
+    """
+    return Credentials.display_credentials()
+
+
+def delete_credential(account_platform):  
+    '''
+    function to delete credentials
+    '''
+    return Credentials.delete_credentials(account_platform)
+
+
+def find_credential(account_name):  
+    '''
+    find credentials eg to delete
+    '''
+    return Credentials.find_by_account_platform(account_name)
+
+
+def generate_password(password_length):  
+    """
+    generate a random password for the user
+    """
+    return Credentials.generate_password(password_length)
+     
 
 if __name__ == '__main__':
   main()        

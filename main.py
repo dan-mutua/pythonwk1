@@ -183,9 +183,9 @@ def main():
                 search_credential = find_credential(search_name)
                 print("_"*50)
                 search_credential.delete_credentials()
-                print('\n')
+              
                 print(f"Your stored credentials for : {search_credential.account} successfully deleted!!!")
-                print('\n')
+               
           else:
                 print("That Credential you want to delete does not exist in your store yet")
 

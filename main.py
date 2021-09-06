@@ -117,7 +117,7 @@ def main():
       print("password")
       my_password=input()
       
-      # if check_existing_user(my_username):
+      
       while True:
         print("you successfuly logged in")
         print("Use these short codes: cna - Create a new credential mmc - Display Credentials  q2 - Find a credential zz - Generate A randomn password rm - Delete credential  uuu - Exit the application ")
@@ -196,8 +196,7 @@ def main():
 
         else:
             print("Wrong entry... Check your entry again and let it match those in the menu")
-      # else:
-      #   print('User does not exist')
+     
 
     elif nav_code == 'uu':
       print("Bye!!")

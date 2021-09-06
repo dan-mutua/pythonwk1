@@ -120,10 +120,10 @@ def main():
       # if check_existing_user(my_username):
       while True:
         print("you successfuly logged in")
-        print("Use these short codes:\n CC - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n EX - Exit the application \n")
+        print("Use these short codes:\n cna - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n uuu - Exit the application \n")
 
         cred_code = input()
-        if cred_code == 'cc':
+        if cred_code == 'cna':
           print("create new credentials")
           print("."*20)
           print("Account name ....")
@@ -189,7 +189,7 @@ def main():
           else:
                 print("That Credential you want to delete does not exist in your store yet")
 
-        elif cred_code == 'ex':
+        elif cred_code == 'uuu':
           print("Thanks for using passwords store manager.. See you next time!")
           break
           

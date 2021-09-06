@@ -120,7 +120,7 @@ def main():
       # if check_existing_user(my_username):
       while True:
         print("you successfuly logged in")
-        print("Use these short codes:\n cna - Create a new credential \n DC - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n uuu - Exit the application \n")
+        print("Use these short codes:\n cna - Create a new credential \n mmc - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n uuu - Exit the application \n")
 
         cred_code = input()
         if cred_code == 'cna':
@@ -149,7 +149,7 @@ def main():
           print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
           print('\n')
 
-        elif cred_code == 'dc':
+        elif cred_code == 'mmc':
           if display_credentials():
                 print("Here's your list of acoounts: ")
                  

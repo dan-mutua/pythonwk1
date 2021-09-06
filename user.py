@@ -3,7 +3,7 @@ class User:
   user_list = []
 
 
-  def __init__(self, username,password): #constructor method
+  def __init__(self, username,password): 
     self.username = username
     self.password=password
 
@@ -33,11 +33,11 @@ def check_user_exists(cls,username):
         """
         method that runs to check whether the user exists and confirms the password
         """ 
-        # user = cls.check_user(username)
+        user = cls.check_user(username)
         for user in cls.user_list:
                 if user and user.username == username:
                         return True
         return False     
 
-        # User.user_list.append(self)
+        User.user_list.append(self)
       

@@ -6,7 +6,7 @@ class info:
     """
     Class that creates new instance for credentials
     """
-    credentials_list=[]#an empty credentials list
+    credentials_list=[]
     
     def __init__(self,account,username,password):
         """
@@ -48,9 +48,9 @@ class info:
 
     
 
-    # def generate_password(num):
-    #         password=''
-    #         for n in range(num):
-    #           x= random.randint(0,7)
-    #           password += string.printable(x)
-    #           return password
+    def generate_password(num):
+            password=''
+            for n in range(num):
+              x= random.randint(0,7)
+              password += string.printable(x)
+              return password

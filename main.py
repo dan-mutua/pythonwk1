@@ -174,7 +174,7 @@ def main():
                 print('-' * 50)
           else:
                 print("That Credential does not exist")
-                print('\n')
+                
 
         elif cred_code == 'rm':
           print("Enter the account name of the Credentials you want to delete")

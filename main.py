@@ -120,7 +120,7 @@ def main():
       # if check_existing_user(my_username):
       while True:
         print("you successfuly logged in")
-        print("Use these short codes:\n cna - Create a new credential \n mmc - Display Credentials \n FC - Find a credential \n GP - Generate A randomn password \n D - Delete credential \n uuu - Exit the application \n")
+        print("Use these short codes: cna - Create a new credential mmc - Display Credentials  q2 - Find a credential zz - Generate A randomn password rm - Delete credential  uuu - Exit the application ")
 
         cred_code = input()
         if cred_code == 'cna':
@@ -131,12 +131,12 @@ def main():
           print("Your Account username")
           userName = input()
           while True:
-              print(" TP - To type your own pasword if you already have an account:\n GP - To generate random Password")
+              print(" m7 - To type your own pasword if you already have an account: zz - To generate random Password")
               password_Choice = input().lower().strip()
-              if password_Choice == 'tp':
-                  password = input("Enter Your Own Password\n")
+              if password_Choice == 'm7':
+                  password = input("Enter Your Own Password")
                   break
-              elif password_Choice == 'gp':
+              elif password_Choice == 'zz':
                   print('enter password length: ')
                   num = int(input())
                   password = generate_password(num)
@@ -145,9 +145,9 @@ def main():
                   print("Invalid password please try again")
 
           save_credentials(create_new_credential(account,userName,password))
-          print('\n')
+         
           print(f"Account Credential for: {account} - UserName: {userName} - Password:{password} created succesfully")
-          print('\n')
+          
 
         elif cred_code == 'mmc':
           if display_credentials():
@@ -163,7 +163,7 @@ def main():
           else:
               print("You don't have any credentials saved yet..........")
 
-        elif cred_code == 'fc':
+        elif cred_code == 'q2':
           print("Enter the Account Name you want to search for")
           search_name = input().lower()
           if find_credential(search_name):
@@ -176,7 +176,7 @@ def main():
                 print("That Credential does not exist")
                 print('\n')
 
-        elif cred_code == 'd':
+        elif cred_code == 'rm':
           print("Enter the account name of the Credentials you want to delete")
           search_name = input().lower()
           if find_credential(search_name):

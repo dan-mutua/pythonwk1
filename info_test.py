@@ -57,7 +57,7 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials() 
         
         found_credentials=info.find_by_acc("account")
-        # self.assertEqual(found_credentials.account,test_credentials.account) 
+       
         
     def  test_display_credentials(self):
         """

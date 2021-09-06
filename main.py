@@ -161,7 +161,7 @@ def main():
                 print('*' * 30)
 
           else:
-              print("You don't have any credentials saved yet..........")
+              print("Opps!! you don't have any credentials saved yet")
 
         elif cred_code == 'q2':
           print("Enter the Account Name you want to search for")
@@ -184,13 +184,13 @@ def main():
                 print("_"*50)
                 search_credential.delete_credentials()
               
-                print(f"Your stored credentials for : {search_credential.account} successfully deleted!!!")
+                print(f"Your stored credentials for : {search_credential.account} successfully deleted")
                
           else:
                 print("That Credential you want to delete does not exist in your store yet")
 
         elif cred_code == 'uuu':
-          print("Thanks for using passwords store manager.. See you next time!")
+          print("Thanks for using plocker")
           break
           
 

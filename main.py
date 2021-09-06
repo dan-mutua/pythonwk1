@@ -120,12 +120,11 @@ def main():
       
       while True:
         print("you successfuly logged in")
-        print("Use these short codes: cna - Create a new credential mmc - Display Credentials  q2 - Find a credential zz - Generate A randomn password rm - Delete credential  uuu - Exit the application ")
+        print("Use these  codes to navigate: cna - Create a new credential mmc - Display Credentials  q2 - Find a credential zz - Generate randomn password rm - Delete credential  uuu - log out")
 
         cred_code = input()
         if cred_code == 'cna':
           print("create new credentials")
-          print("."*20)
           print("Account name ....")
           account = input().lower()
           print("Your Account username")
@@ -152,14 +151,10 @@ def main():
         elif cred_code == 'mmc':
           if display_credentials():
                 print("Here's your list of acoounts: ")
-                 
-                print('*' * 30)
-                print('_'* 30)
+            
                 for account in display_credentials():
                     print(f" Account:{account.account} \n User Name:{account.username}\n Password:{account.password}")
-                    print('_'* 30)
-                print('*' * 30)
-
+           
           else:
               print("Opps!! you don't have any credentials saved yet")
 

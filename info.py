@@ -1,3 +1,6 @@
+import string
+import random
+
 class info:
     
     """
@@ -42,3 +45,12 @@ class info:
         displays the list in the credential_list
         """ 
         return cls.credentials_list
+
+    
+
+    # def generate_password(num):
+    #         password=''
+    #         for n in range(num):
+    #           x= random.randint(0,7)
+    #           password += string.printable(x)
+    #           return password

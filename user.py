@@ -29,13 +29,14 @@ def check_user(cls,username):
              return user
          
 @classmethod
-def check_user_exists(cls,username,password): 
+def check_user_exists(cls,username): 
         """
         method that runs to check whether the user exists and confirms the password
         """ 
-        user = cls.check_user(username)
-        if user and user.password == password:
-                return True
+        # user = cls.check_user(username)
+        for user in cls.user_list:
+                if user and user.username == username:
+                        return True
         return False     
 
         # User.user_list.append(self)
